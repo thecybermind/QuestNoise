@@ -1,9 +1,8 @@
-## Interface: 90002
+## Interface: 110002
 ## Title: QuestNoise
 ## Notes: Plays sounds upon making progress on quest objectives
 ## Author: cybermind
-## Version: 3.3
-## SavedVariables: QuestNoiseDB
+## Version: 4.0
+## SavedVariables: QuestNoiseSettings
 
-embeds.xml
 QuestNoise.lua
