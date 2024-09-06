@@ -112,6 +112,14 @@ function EvalMsg(arg)
     msg3 = msg2.."s"
   end
   
+  -- possible workaround for this?
+  -- msg = Storm Spirit: 243/500
+  -- quest log = 243/500 Collect Storm Spirits from creatures of the Dragon Isles
+  if objective and count then
+    is_in_msg = msg:find(objective) and msg:find(count)
+  end
+  
+  
   -- highest priority event found
   local event = nil
 
@@ -133,7 +141,7 @@ function EvalMsg(arg)
         --print("qtext: " .. text)
           
         -- check if this objective matches what was displayed
-        if (text and (text == msg or text == msg2 or text == msg3)) then
+        if (text and (text == msg or text == msg2 or text == msg3 or is_in_msg)) then
         
           --print("match!")
 
