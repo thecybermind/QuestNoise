@@ -3,6 +3,8 @@
 -- v4.0
 -- * changed TOC version to 110002
 -- * removed Ace & other libraries
+-- * updated for War Within
+-- * added additional check that looks for the 2 parts of the UI message ("Storm Spirit" and "243/500") in a quest text ("243/500 Collect Storm Spirits from creatures of the Dragon Isles")
 -- v3.3
 -- * changed TOC version from 90200 to 90002
 -- v3.2
@@ -113,8 +115,8 @@ function EvalMsg(arg)
   end
   
   -- possible workaround for this?
-  -- msg = Storm Spirit: 243/500
-  -- quest log = 243/500 Collect Storm Spirits from creatures of the Dragon Isles
+  -- msg = "Storm Spirit: 243/500"
+  -- quest log = "243/500 Collect Storm Spirits from creatures of the Dragon Isles"
   if objective and count then
     is_in_msg = msg:find(objective) and msg:find(count)
   end
