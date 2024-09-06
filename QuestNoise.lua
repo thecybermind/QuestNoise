@@ -96,7 +96,7 @@ QuestNoise_ObjectivesBuffer = {}
 function EvalMsg(arg)
   if not arg then return end
 
-  local msg, msg2, msg3 = arg
+  local msg, msg2, msg3, is_in_msg = arg
   
   -- reorder arg for a second possible matching message
   -- new patch swapped quest leaderboard text around from:
@@ -136,9 +136,10 @@ function EvalMsg(arg)
         local text, finished = q.text, q.finished
         --print("quest text: " .. text)
 
-        -- possible workaround for this?
+        -- possible workaround for this problem:
         -- msg = "Storm Spirit: 243/500"
         -- quest log = "243/500 Collect Storm Spirits from creatures of the Dragon Isles"
+        -- this will search the quest log message for the 2 components of the UI message (X: Y) and look for a match
         if objective and count then
             is_in_msg = text:find(objective, 1, true) and text:find(count, 1, true)
         end
