@@ -1,5 +1,7 @@
--- QuestNoise v4.0
+-- QuestNoise v4.0.1
 
+-- v4.0.1
+-- * fixed bug with additional message check
 -- v4.0
 -- * changed TOC version to 110002
 -- * removed Ace & other libraries
@@ -114,14 +116,6 @@ function EvalMsg(arg)
     msg3 = msg2.."s"
   end
   
-  -- possible workaround for this?
-  -- msg = "Storm Spirit: 243/500"
-  -- quest log = "243/500 Collect Storm Spirits from creatures of the Dragon Isles"
-  if objective and count then
-    is_in_msg = msg:find(objective) and msg:find(count)
-  end
-  
-  
   -- highest priority event found
   local event = nil
 
@@ -140,8 +134,15 @@ function EvalMsg(arg)
       for i, q in pairs(oinfo) do
 
         local text, finished = q.text, q.finished
-        --print("qtext: " .. text)
-          
+        --print("quest text: " .. text)
+
+        -- possible workaround for this?
+        -- msg = "Storm Spirit: 243/500"
+        -- quest log = "243/500 Collect Storm Spirits from creatures of the Dragon Isles"
+        if objective and count then
+            is_in_msg = text:find(objective, 1, true) and text:find(count, 1, true)
+        end
+
         -- check if this objective matches what was displayed
         if (text and (text == msg or text == msg2 or text == msg3 or is_in_msg)) then
         

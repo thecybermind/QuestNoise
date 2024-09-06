@@ -2,7 +2,7 @@
 ## Title: QuestNoise
 ## Notes: Plays sounds upon making progress on quest objectives
 ## Author: cybermind
-## Version: 4.0
+## Version: 4.0.1
 ## SavedVariables: QuestNoiseSettings
 
 QuestNoise.lua
