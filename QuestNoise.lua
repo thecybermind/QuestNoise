@@ -1,64 +1,3 @@
--- QuestNoise v4.0.1
-
--- v4.0.1
--- * fixed bug with additional message check
--- v4.0
--- * changed TOC version to 110002
--- * removed Ace & other libraries
--- * updated for War Within
--- * added additional check that looks for the 2 parts of the UI message ("Storm Spirit" and "243/500") in a quest text ("243/500 Collect Storm Spirits from creatures of the Dragon Isles")
--- v3.3
--- * changed TOC version from 90200 to 90002
--- v3.2
--- * forgot to update version in TOC
--- v3.1
--- * further update for Shadowlands, fixed events firing in different orders
--- v3.0
--- * update for Shadowlands
--- v2.1
--- * uses Blizzard's SOUNDKIT ids
--- v2.0.4
--- * now checks for quest log updates in UNIT_QUEST_LOG_CHANGED("player") instead of QUEST_LOG_UPDATE
--- v2.0.3
--- * now saves profile data
--- v2.0.2
--- * Now checks for another style of quest objective: "Objective: count" will look for "count Objectives"
--- v2.0.1
--- * wrong toc version
--- v2.0.0
--- * TOC bump for Legion
--- * Updated new UI_INFO_MESSAGE handling
--- v1.9.1
--- * TOC bump
--- v1.9
--- * Now checks for both styles of quest objective: "Objective: count" and "count Objective"
--- * No longer uses .wav files, also automatically replaces ".wav" with ".ogg"
--- v1.8
--- * Bumped TOC to 60000
--- * Fixed objective tracking with WoD
--- v1.7
--- * Bumped TOC to 50400
--- * Will now play highest-priority sound instead of first one encountered in quest log
--- * Now handles .ogg files in MakeSound()
--- v1.6
--- * Fixed crash with nil quest objective strings (like Mark of the World Tree quests have)
--- * Bumped TOC to 50001
--- v1.5.1
--- * Bumped TOC to 40300
--- v1.4
--- * Bumped TOC to 40000
--- v1.3
--- * Fixed bug with saving settings
--- v1.2
--- * Added option to enable/disable "Quest Complete" message
--- v1.1
--- * Added Ace3 config menu (under Interface > Addons) to enable/disable/change sounds for events
-
-
--- our frame
-QuestNoise = CreateFrame("Frame", "QuestNoise", UIParent)
-
-
 -- for sound FileDataIDs, lookup the original sound file name at https://old.wow.tools/files/
 QuestNoiseSettings = {
   ["enableObjProgress"] = true,
@@ -71,6 +10,8 @@ QuestNoiseSettings = {
 }
 
 
+-- our frame
+QuestNoise = CreateFrame("Frame", "QuestNoise", UIParent)
 -- events and main event handler (simply forwards to a member function of the same name)
 QuestNoise:RegisterEvent("UNIT_QUEST_LOG_CHANGED")
 QuestNoise:RegisterEvent("QUEST_LOG_UPDATE")
