@@ -1,0 +1,30 @@
+# https://support.curseforge.com/en/support/solutions/articles/9000197281-automatic-packaging#File-Packaging-Configuration
+package-as: QuestNoise
+enable-nolib-creation: no
+# externals:
+    # libs/LibDialog:
+        # url: https://github.com/wildstarnasa/LibDialog.git
+        # tag: latest # if this line is left out, the latest version (even if it's not a tag) is assumed
+    # libs/GeminiAddon:
+        # url: https://github.com/wildstarnasa/GeminiAddon.git
+        # tag: 1337.0.10 # This is an example. Please use an actual tag if you are targeting a specific version.
+        
+
+# required for multi folder addons
+# move-folders:
+    # QuestNoise/QuestNoise: QuestNoise
+    # QuestNoise/QuestNoise_Options: QuestNoise_Options
+
+# Files and directories beginning with a dot (such as .git) are automatically ignored, as is the pgkmeta file itself.
+# wildcards (*) are not supported by curse
+# ignore: 
+    # - README.md
+
+manual-changelog:
+    filename: CHANGES.txt
+    # markup-type: creole
+
+# license-output: LICENSE.txt
+
+# tools-used:
+    # - Notepad++
