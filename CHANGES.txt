@@ -1,3 +1,5 @@
+v5.0
+* TOC bump to 120000
 v4.0.1
 * fixed bug with additional message check
 v4.0
