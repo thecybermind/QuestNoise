@@ -1,0 +1,7 @@
+## Interface: 120105
+## Title: QuestNoise
+## Notes: Plays sounds upon making progress on quest objectives
+## Author: cybermind
+## Version: 6.0
+
+QuestNoise.lua

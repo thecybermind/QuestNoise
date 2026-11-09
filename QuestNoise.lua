@@ -1,13 +1,13 @@
 -- for sound FileDataIDs, lookup the original sound file name at https://old.wow.tools/files/
 QuestNoiseSettings = {
   ["enableObjProgress"] = true,
-  ["objProgressSound"] = "567482",      -- "sound/interface/auctionwindowopen.ogg"
+  ["objProgressSound"] = 567482,      -- "sound/interface/auctionwindowopen.ogg"
   ["enableObjComplete"] = true,
-  ["objCompleteSound"] = "567499",      -- "sound/interface/auctionwindowclose.ogg"
+  ["objCompleteSound"] = 567499,      -- "sound/interface/auctionwindowclose.ogg"
   ["enableQuestComplete"] = true,
-  ["questCompleteSound"] = "558132",    -- "sound/creature/peon/peonbuildingcomplete1.ogg", alternatively "567409" for "sound/interface/readycheck.ogg"
+  ["questCompleteSound"] = 558132,    -- "sound/creature/peon/peonbuildingcomplete1.ogg", alternatively "567409" for "sound/interface/readycheck.ogg"
   ["enableQuestCompleteMsg"] = true,
-  ["soundChannel"] = "Master",          -- "Master", "Music", "SFX", "Ambience", "Dialog"
+  ["soundChannel"] = "Master",        -- "Master", "Music", "SFX", "Ambience", "Dialog"
 }
 
 
